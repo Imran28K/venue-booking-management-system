@@ -1,58 +1,109 @@
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
- }
- 
- .login-container, input {
-    width: 300px;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    display: block;
-   margin-left: auto;
-   margin-right: auto;
- }
- 
- h2 {
-    text-align: center;
- }
- 
- label, input, button {
-    display: block;
-    width: 100%;
-    margin-top: 10px;
- }
- 
- input {
+   font-family: Arial, sans-serif;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   margin: 0;
+   background: linear-gradient(135deg, #3c2f2f, #d8c3a5);
+   color: #fff;
+   overflow: hidden;
+}
+
+.login-container {
+   width: 400px;
+   padding: 30px;
+   background: #2e2e2e;
+   box-shadow: 0 10px 20px #1a1a1a;
+   border-radius: 8px;
+   text-align: center;
+   position: relative;
+}
+
+.login-container::before {
+   content: '';
+   position: absolute;
+   top: -20px;
+   left: -20px;
+   width: calc(100% + 40px);
+   height: calc(100% + 40px);
+   background: linear-gradient(45deg, #5a4e4d, #8c7a6b, #d8c3a5, #6c584c);
+   background-size: 300%;
+   border-radius: 12px;
+   z-index: -1;
+   animation: gradientMove 5s infinite;
+}
+
+@keyframes gradientMove {
+   0% {
+       background-position: 0% 50%;
+   }
+   50% {
+       background-position: 100% 50%;
+   }
+   100% {
+       background-position: 0% 50%;
+   }
+}
+
+h2 {
+   font-size: 2rem;
+   text-transform: uppercase;
+   margin-bottom: 20px;
+   letter-spacing: 2px;
+   color: #e6e6e6;
+}
+
+label {
+   font-weight: bold;
+   margin-top: 10px;
+   color: #d1bfa7;
+}
+
+input {
    width: 100%;
-   padding: 8px;
-   margin-top: 5px;
-   box-sizing: border-box;
- }
- 
- button {
-    padding: 10px;
-    background-color: #5cb85c;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-top: 15px;
- }
- 
- button:hover {
-    background-color: #4cae4c;
- }
- 
- #error-message {
-    color: red;
-    font-size: 0.9em;
-    text-align: center;
-    margin-top: 10px;
- }
- 
+   padding: 10px;
+   margin-top: 10px;
+   border: 1px solid #5a4e4d;
+   border-radius: 5px;
+   background: #3c2f2f;
+   color: #f4f4f4;
+   outline: none;
+   font-size: 1rem;
+}
+
+input::placeholder {
+   color: #c4a48a;
+}
+
+button {
+   padding: 12px;
+   width: 100%;
+   background-color: #6c584c;
+   color: white;
+   border: 2px solid #8c7a6b;
+   border-radius: 5px;
+   font-size: 1rem;
+   font-weight: bold;
+   cursor: pointer;
+   transition: transform 0.3s, background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+   background-color: #d8c3a5;
+   color: #3c2f2f;
+   transform: scale(1.05);
+}
+
+#error-message {
+   color: #a67b5b;
+   font-size: 0.9rem;
+   margin-top: 15px;
+   text-align: center;
+}
+
+
+.login-container:hover {
+   transform: scale(1.02);
+   transition: transform 0.3s ease;
+}
