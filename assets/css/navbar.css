@@ -1,0 +1,74 @@
+/* Navigation Bar Styling */
+.navbar {
+	background-color: #e5e7eb; /* gray-200 */
+	box-shadow: 0 2px 4px rgba(209, 213, 219, 0.5); /* shadow-gray-300 */
+	width: 100%;
+	padding: 0 2rem;
+}
+
+.navbar-container {
+	max-width: 1200px;
+	height: 4rem; /* 64px */
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+/* Logo */
+.logo .icon {
+	height: 2.5rem; /* 40px */
+	width: 2.5rem;
+	color: #6366f1; /* indigo-500 */
+}
+
+/* Navigation Links */
+.nav-links ul {
+	display: flex;
+	font-weight: 600;
+	justify-content: space-between;
+	gap: 1rem;
+	list-style: none;
+	color: #6b7280; /* gray-500 */
+}
+
+.nav-links ul li a {
+	text-decoration: none;
+	color: inherit;
+	transition: color 0.3s;
+}
+
+.nav-links ul li.active a {
+	color: #6366f1; /* indigo-500 */
+}
+
+.nav-links ul li a:hover {
+	color: #818cf8; /* lighter indigo on hover */
+}
+
+/* Login Button */
+.login-button button {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.5rem 1rem;
+	background-color: #6366f1; /* indigo-500 */
+	color: #f9fafb; /* gray-50 */
+	border: none;
+	border-radius: 0.75rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.login-button button:hover {
+	background-color: #4f46e5; /* darker indigo-600 */
+}
+
+/* Login Icon */
+.login-icon {
+	height: 1.25rem; /* 20px */
+	width: 1.25rem;
+}
+
